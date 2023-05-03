@@ -30,7 +30,7 @@ const cookieOption= {
     httpOnly:true
 }
 
-if(process.env.NODE_ENV === 'production')cookieOptions.secure = true;
+if(process.env.NODE_ENV === 'production')cookieOption.secure = true;
 res.cookie('jwt',token,cookieOption);
     res.status(201).json({
         status:'success',
