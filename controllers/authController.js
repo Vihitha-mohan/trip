@@ -76,6 +76,7 @@ const cookieOption= {
     expires:new Date(Date.now()+process.env.JWT_COOKIE_EXPIRE_IN*24*60*60*1000),
     httpOnly:true
 };
+    console.log(cookieOption);
 if(process.env.NODE_ENV === 'production')cookieOptions.secure = true;
 res.cookie('jwt',token,cookieOption);
 res.status(200).json(
