@@ -12,6 +12,7 @@ const signToken = id =>{
 
 exports.signup = catchAsync(async(req,res,next)=>
 {
+    //cookie options
 const newUser = await User.create({
     name:req.body.name,
     email:req.body.email,
