@@ -76,8 +76,9 @@ const cookieOption= {
     expires:new Date(Date.now()+process.env.JWT_COOKIE_EXPIRE_IN*24*60*60*1000),
     httpOnly:true
 };
-    console.log(cookieOption);
-if(process.env.NODE_ENV === 'production')cookieOptions.secure = true;
+    console.log("***********",process.env.JWT_COOKIE_EXPIRE_IN);
+//if(process.env.NODE_ENV === 'production')cookieOptions.secure = true;
+cookieOptions.secure = true;
 res.cookie('jwt',token,cookieOption);
 res.status(200).json(
     {
@@ -252,7 +253,9 @@ const cookieOption= {
     expires:new Date(Date.now()+process.env.JWT_COOKIE_EXPIRE_IN*24*60*60*1000),
     httpOnly:true
 }
-if(process.env.NODE_ENV === 'production')cookieOptions.secure = true;
+//if(process.env.NODE_ENV === 'production')cookieOptions.secure = true;
+ cookieOptions.secure = true;
+
 res.cookie('jwt',token,cookieOption);
 res.status(200).json(
     {
