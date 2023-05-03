@@ -116,6 +116,8 @@ res.status(200).json(
     }
   }
 );
+ //Added to redirect
+ location.assign('/me');
 });
 
 exports.deleteMe =catchAsync(async(req,res,next)=>{
