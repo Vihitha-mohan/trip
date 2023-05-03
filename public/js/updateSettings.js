@@ -13,10 +13,6 @@ export const updateSettings = async(data,type)=>
     url,
     data
 });
- btn-save.addEventListener('click',()=>
-                           {
-                            location.reload();
-                            });
 if(res.data.status === 'success')
 {
     showAlert('success',`${type.toUpperCase()} updated successfully`);
