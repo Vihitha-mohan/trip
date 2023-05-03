@@ -116,8 +116,6 @@ res.status(200).json(
     }
   }
 );
- //Added to redirect
- window.location.assign('/me');
 });
 
 exports.deleteMe =catchAsync(async(req,res,next)=>{
